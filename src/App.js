@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; // Import your CSS file for styling
 
-function App() {
+const Card = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="card">
+      <img
+        className="card-img"
+        src="https://via.placeholder.com/150"
+        alt="Card"
+      />
+      <div className="card-content">
+        <h3>Card Title</h3>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          This is a simple card with some sample text. You can customize it as
+          per your needs.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
     </div>
   );
-}
+};
+
+const App = () => {
+  return (
+    <div className="App">
+      <h1>Responsive Cards in React</h1>
+      <div className="card-container">
+        <Card />
+        <Card />
+      </div>
+    </div>
+  );
+};
 
 export default App;
+
